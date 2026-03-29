@@ -49,6 +49,40 @@ int main() {
 	       else{
 	           cout<<"NO"<<endl;
 	       }
+
+			// this is the optimal approach 
+			// the main problem above was the n^2 tc that was n*q times loop was running we can simplify
+			// by maintaining a prefix sum array so that we dont need the inner loop for the sum of l to j 
+
+			 vector<int> pref(n);
+        long long sum=0;
+	     for(int i=0;i<n;i++){
+	         
+	          sum+=a[i];
+	         pref[i]=sum;
+	     }
+	    
+	    
+	    
+	    for(int i=0;i<q;i++){
+	        int l=mat[i][0];
+	        int r=mat[i][1];
+	        int k=mat[i][2];
+	        long long temp=0;
+	        temp=pref[r-1];
+	        if(l>1)
+	        temp-=pref[l-2]; // this is  a tricky observation switching between 1 based and 0 based indexing please use pen and paper
+			// to  understand the deeper meaning 
+	   
+	       
+	       
+	           int curr=sum+k*(r-l+1)-temp;
+	       if(curr%2!=0){
+	           cout<<"YES"<<endl;
+	       }
+	       else{
+	           cout<<"NO"<<endl;
+	       }
 	       
 	    }
 	}
