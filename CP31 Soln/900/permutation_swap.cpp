@@ -40,6 +40,19 @@ int main() {
 	         break;
 	     }
 	 }
+
+		 // optimized solution: if we try to see our apph we are trying to 
+	 // find the greatest no. (k) that divides all the ai-i pairs of the array 
+	 // in simple words we are trying to find the gcd of all the ai-i pairs of the array
+	 // so we can reduce it to a simple for loop and find the gcd 
+	 
+	 int g=abs(a[0]-1);
+	 for(int i=1;i<n;i++){
+	     g=__gcd(g,abs(a[i]-(i+1)));
+	 }
+	 cout<<g<<endl;
+
+		
 	    
 	}
 
