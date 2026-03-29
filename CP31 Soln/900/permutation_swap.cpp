@@ -51,6 +51,7 @@ int main() {
 	     g=__gcd(g,abs(a[i]-(i+1)));
 	 }
 	 cout<<g<<endl;
+		// to run the optimized soln pehle upar wala comment out kar dena 
 
 		
 	    
