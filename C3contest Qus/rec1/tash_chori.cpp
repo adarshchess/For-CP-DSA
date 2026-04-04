@@ -9,8 +9,9 @@ int main() {
           vector<int> curr;
          for(int i=0;i<n;i++){
              cin>>a[i];
-             if(a[i]==1){
-                 curr.push_back(i);
+             if(a[i]==1){ 
+                 curr.push_back(i); // jaha jaha one tha uske indexs note kar liye 
+				 // taki later we can check if they are coming together or not *2%51 ho raha hai har shuffle me 
              }
          }
          
